@@ -1,76 +1,88 @@
 ///<reference types="cypress" />
 
-// describe('Tranverse method in cypress',function(){
-//     //---eq()
-//     it('To get a DOM element at a specific index, use the .eq() command.',function(){
-//         cy.visit('https://www.lonavalacab.com/')
-//         cy.get('.navbar-nav.ml-auto').children().should('have.length',6)
-//         cy.get('.navbar-nav.ml-auto').children().eq(2).should('contain','T & C')
-//     })
-//    //-first()-----
-//     it('To get the first DOM element within elements, use the .first() command.',function(){
-//         cy.visit('https://www.lonavalacab.com/')
-//         cy.get('.navbar-nav.ml-auto').find('li').first().should('contain','Packages')   
-//     })
-//      //---last()----
-//     it('To get the last DOM element within elements, use the .last() command.',function(){
-//         cy.visit('https://www.lonavalacab.com/')
-//         cy.get('.navbar-nav.ml-auto').find('li').last().should('contain','Blog') 
-//     })
-//     //--children()--
-//     it('To get children of DOM elements, use the .children() command.',function(){
-//         cy.visit('https://www.lonavalacab.com/')
-//         cy.get('.navbar-nav.ml-auto').children().should('have.length',6)
-//     })
-//      //-----next()---
-//     it('To get the next sibling DOM element within elements, use the .next() command.',function(){
-//         cy.visit('https://www.lonavalacab.com/')
-//         cy.get('.navbar-nav.ml-auto').find('li').first().next().should('contain','sights')
-//     })
-//     //----prev()---
-//     it('To get the previous sibling DOM element within elements, use the .prev() command.',function(){
-//         cy.visit('https://www.lonavalacab.com/')
-//         cy.get('.navbar-nav.ml-auto').children().last().prev().should('contain','FAQ')
-//     })
-//     //-----siblings()---
-//     it('To get all sibling DOM elements of elements, use the .siblings() command.',function(){
-//         cy.visit('https://www.lonavalacab.com/')
-//         cy.get('.navbar-nav.ml-auto').children().first().siblings().should('have.length',5)
-//     })
-//     //------nextAll()----
-//     it('To get all of the next sibling DOM elements within elements, use the .nextAll() command.',function(){
-//         cy.visit('https://www.lonavalacab.com/')
-//         cy.get('.navbar-nav.ml-auto').children().first().nextAll().should('have.length',5)
+describe('To learn traverse methods',()=>{
+    it('TC-01 .children() method',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').children().should('have.length',11)
+    })
+    it.only('TC-02 .first() method',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').children().first().should('contain','')
+        cy.get('.menu.list-unstyled').children().first().should('be.visible')
+        cy.get('.menu.list-unstyled').children().first().should('exist')
+      
+    })
+    it('TC-03 .last() method',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').children().last().should('have.attr','class','menu-item-has-children')
 
-//     })
-//     //------.preAll()---
-//     it('To get all previous sibling DOM elements within elements, use the .prevAll() command.',function(){
-//         cy.visit('https://www.lonavalacab.com/')
-//         cy.get('.navbar-nav.ml-auto').children().last().prevAll().should('have.length',5)
+        
+    })
+    it('TC-04 .eq() method',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').children().eq(3).should('contain','Tailorm')
+    })
+    it.only('TC-05 .find() method',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').children().find('a').each((el,i)=>{
+            //.click,.type()----cy.wrap(el)
+            let text=el.text()
+            cy.log(text)
+        })
+    }) 
+    it('TC-06 .next() method',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').children().first().next().should('contain','Speciality')
+      
+    })
+    it('TC-07 .prev() method',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').children().last().prev().should('contain','About Us')
+        
+    })  
+    it('TC-08 .prevAll() method',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').children().eq(2).prevAll().should('have.length',2)
+        
+    })
+    it('TC-09 .nextAll() method',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').children().first().nextAll().should('have.length',10)
+        
+    })
+    it('TC-10 .closest() method',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').closest('nav').should('have.attr','id','main-menu')
+        cy.get('div[class="topnav__top"]').closest('header').should('have.attr','id','header')
+    })
 
-//     })
-//     //--find()--
-//     it('To get descendant DOM elements of the selector, use the .find() command.',function(){
-//         cy.visit('https://www.lonavalacab.com/')
-//         cy.get('.navbar-nav.ml-auto').find('li').should('have.length',6)
-//     })
-//     //---closest()---
-//     it('To get the closest ancestor DOM element, use the .closest() command.',function(){
-//         cy.visit('https://www.lonavalacab.com/')
-//         cy.get('button[id="nav-toggle"]').closest('nav').should('have.attr','class','navbar navbar-expand-lg narbar-light')
-//     })
-//     //---parents()-----
-//     it('To get parents DOM element of elements, use the .parents() command.',function(){
-//         cy.visit('https://www.lonavalacab.com/')
-//         cy.get('[id="mainNav"]').parents().should('have.length',6)
-//         cy.get('[id="mainNav"]').parents().should('match', 'div')
-//         cy.get('[id="mainNav"]').parents().should('match', 'nav')
-   
-//     })
-// //   //-----prevUnti()---
-// //   it.only('To get all previous sibling DOM elements within elements until other element, use the .prevUntil() command.',function(){
-// //     cy.visit('https://www.lonavalacab.com/')
-// //     cy.get('.navbar-nav.ml-auto').children().last().prevUntil('a[href="#packages"]').should('have.length',5)
+})
 
-// // })
-//})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
