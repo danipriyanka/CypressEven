@@ -13,11 +13,12 @@
 //plugins---- Extrernally plugins, Extends cypress behav
 //support---- customised function 
 
+
 //////<input type="text" class="login "name="username" id="username">text</input>
 
-//tagName ---  input
-//class -----  .login
-//id-------    #username
+//tagName --------  input
+//class ---------- .login
+//id--------------  #username
 //common formula----- tagname[attri="value"]------input[name="username"]
-//text-----
+//text-------------
 
