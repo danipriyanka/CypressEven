@@ -70,6 +70,25 @@ describe('TO learn Traversing methods',()=>{
         cy.get('ul[class="menu list-unstyled mb-0"]').children().eq(2).prevAll().should('have.length',2)
       
     })
+    it('TC-12 .siblings()',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('ul[class="menu list-unstyled mb-0"]').children().first().siblings().should('have.length',10)
+
+        
+    })
+    it('TC-13 .parent()',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').parent().should('have.id','main-menu')
+        
+    })
+    it('TC-13 .parents()',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').parents().should('match','nav')  
+    })
+    it.only('TC-13 .parents()',()=>{
+        cy.visit('https://www.kesari.in/')
+        cy.get('.menu.list-unstyled').parentsUntil('header').should('have.length',3)
+    })
   
 
 })
