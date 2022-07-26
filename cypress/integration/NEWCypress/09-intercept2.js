@@ -4,7 +4,7 @@ describe('',()=>{
     it.only('verify the getComment API with stubbed data', function () {
         cy.intercept({
             url: "https://jsonplaceholder.cypress.io/comments/1",
-            method: "GET"},{
+            method: "GET"},{   
             body:{name: 'Priya',
             hobby: 'Drawing'
         }   
