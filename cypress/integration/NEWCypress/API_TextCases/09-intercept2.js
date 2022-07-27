@@ -1,5 +1,5 @@
 //Mock----Dummy --Fake
-import mockapiBody from '../../fixtures/mockapiBody.json'
+import mockapiBody from '../../../fixtures/mockapiBody.json'
 describe('',()=>{
     it.only('verify the getComment API with stubbed data', function () {
         cy.intercept({

@@ -1,6 +1,6 @@
 ///<reference types="cypress" />
-import details from '../../fixtures/details.json'
-import {user} from '../../fixtures/detail'
+import details from '../../../fixtures/details.json'
+import {user} from '../../../fixtures/detail'
   describe('To learn fixture',function(){
     Cypress.on('uncaught:exception',(err,runnable)=>{
         return false
