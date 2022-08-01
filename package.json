@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "chrome:staging":"npx cypress run --headed --browser chrome --config baseUrl=\"https://www.google.com/\"",
+    "chrome:local":"npx cypress run --headed --browser chrome --config baseUrl=\"https://www.facebook.com/\"",
+    "chrome:canary":"npx cypress run --headed --browser chrome --config baseUrl=\"https://www.youtube.com/\"",
+    "chrome:production":"npx cypress run --headed --browser chrome --config baseUrl=\"https://www.yahoo.com/\"",
+    "headless:production":"npx cypress run --headed --browser chrome --config baseUrl=\"https://www.yahoo.com/\"",
+    "stagfile":"npx cypress run --headed --browser chrome --config-file staging-config.json",
+    "prodfile":"npx cypress run --headed --browser chrome --config-file production-config.json",
+    "utilityUrl":"npx cypress --headed --browser chrome run  --env ENV=\"staging\""
   },
   "author": "",
   "license": "ISC",
