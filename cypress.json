@@ -1,3 +1,5 @@
 {
-    "baseUrl":"https://opensource-demo.orangehrmlive.com"
+    "baseUrl":"https://opensource-demo.orangehrmlive.com",
+    "pageLoadTimeOut":90000,
+    "chromeWebSecurity":false
 }
