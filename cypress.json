@@ -1,5 +1,10 @@
 {
-    "baseUrl":"https://opensource-demo.orangehrmlive.com",
+    "baseUrl":"https://practicetestautomation.com",
     "pageLoadTimeOut":90000,
-    "chromeWebSecurity":false
+    "chromeWebSecurity":false,
+    "env":{
+        "username":"student",
+        "passward":"Password123"
+    }
+   
 }

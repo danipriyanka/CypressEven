@@ -1,11 +1,11 @@
 export class Utility {
     getBaseUrl() {
-        let envi = Cypress.env('ENV'); 
-        if (envi == 'production')
-            return "https://www.proudction-website.com"; 
-        else if (envi == 'staging')
-            return "https://staging-website.com";
-        else if (envi == 'qa')
-            return "http://qa-website.com";
+        let env = Cypress.env('ENV'); 
+        if (env == 'production')
+            return "https://practicetestautomation.com"; 
+        else if (env == 'staging')
+            return "https://practicetestautomation.com/practice-test-login/";
+        else if (env == 'qa')
+            return "https://practicetestautomation.com";
     }
 }
