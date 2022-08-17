@@ -21,6 +21,7 @@
     "npx": "^10.2.2"
   },
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.1",
     "cypress-iframe": "^1.0.1"
   }
 }

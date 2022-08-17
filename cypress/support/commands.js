@@ -40,3 +40,4 @@ Cypress.Commands.add('login',(url,username,passward)=>{
 
    })
 
+   require('@4tw/cypress-drag-drop')
