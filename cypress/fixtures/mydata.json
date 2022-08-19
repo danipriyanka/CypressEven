@@ -1,17 +1,26 @@
 [
     {
         "dropDown1":"eclipse",
-        " dropDown2":"",
-        " dropDown3":""
+        "dropDown2":"java",
+        "dropDown3":"python"
+       
+    },
+    {   
+        "prodShortcut1":"Be",
+        "prodShortcut2":"Ca",
+        "Product1":"Beetroot - 1 Kg",
+        "Product2":"Beans - 1 Kg" ,
+        "Product3":"Carrot - 1 Kg"
+    
     },
     {
-
+         "country1":"India",
+         "country2":"Brazil"
     },
     {
-
-    },
-    {
-        "firstName":"",
-        "lastName":""
+        "firstName":"Priyanka",
+        "lastName":"Dani",
+        "email":"psk@gmail.com",
+        "comments":"Done"
     }
 ]

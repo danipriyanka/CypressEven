@@ -1,5 +1,5 @@
 {
-    "baseUrl":"https://practicetestautomation.com",
+ 
     "pageLoadTimeOut":90000,
     "chromeWebSecurity":false,
     "env":{

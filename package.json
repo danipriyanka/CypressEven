@@ -18,10 +18,12 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "9.7",
+    "cypress-downloadfile": "^1.2.2",
     "npx": "^10.2.2"
   },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.1",
+    "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1"
   }
 }

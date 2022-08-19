@@ -12,6 +12,7 @@ describe('To learn POM',()=>{
      obj.enterPassward(testData.passward)
     //  cy.get(obj.loginButton).click()
      obj.click(obj.loginButton)
+     obj.ValidateErrMsg()
      
     })
 

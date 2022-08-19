@@ -3,12 +3,12 @@ class login {
         cy.visit("https://opensource-demo.orangehrmlive.com/")
     } 
     enterUserName(value){
-        cy.get('#txtUsername').type(value)
+        cy.get('[name="username"]').type(value)
     }
     enterPassward(value2){
-        cy.get('#txtPassword').type(value2)
+        cy.get('[name="password"]').type(value2)
     }
-    loginButton="#btnLogin"
+    loginButton='[type="submit"]'
     click(locator){
         cy.get(locator).click()
     }
@@ -18,7 +18,7 @@ class login {
 
     }
     ValidateErrMsg(){
-        cy.get('#spanMessage').should('be.visible')
+        cy.get('[role="alert"] >div >p').should('have.text','Invalid credentials')
     }
 
 }

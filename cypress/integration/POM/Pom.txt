@@ -3,7 +3,7 @@ Pom---Page object Model
 //Page object----Create object of Page class
 //Methods----call those methods in our test
 
-//Adv--
+//Advantages------
 1.Reusablity
 2.Mentainance
 3.Readablity

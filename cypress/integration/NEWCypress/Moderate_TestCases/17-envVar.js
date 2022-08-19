@@ -1,4 +1,4 @@
-import {Utility} from "../../support/utility"
+import {Utility} from "../../../support/utility"
 ///<reference types="cypress"/>
 //Env var----Global variables
 //Qa,staging,production-----------
